@@ -1,3 +1,6 @@
 # crack_detection
-本文使用CarNet作为裂缝检测的模型，并完善原作者的github库中的数据处理和数据检测部分
+本文使用CarNet作为裂缝检测的模型，并完善原作者的github库中的数据处理和数据检测部分，由于时间限制只做了图片部分，视频部分等以后有时间再更新
 原作者的github库为https://github.com/shiyanrubing/CarNet-V1.0
+使用时先运行split.py划分数据，然后运行creat_lst.py生成数据
+将生成的数据和图片分别放入train和test文件夹
+运行detect.py检测图片
