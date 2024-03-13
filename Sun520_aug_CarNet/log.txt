@@ -1,0 +1,169 @@
+2024-03-11 23:23:01 - 10772 - main - 248: - ********************************************************************************
+2024-03-11 23:23:01 - 10772 - main - 249: - the args are the below
+2024-03-11 23:23:01 - 10772 - main - 250: - ********************************************************************************
+2024-03-11 23:23:01 - 10772 - main - 252: - dataset,Sun520_aug
+2024-03-11 23:23:01 - 10772 - main - 252: - param_dir,Sun520_aug_CarNet
+2024-03-11 23:23:01 - 10772 - main - 252: - base_lr,0.0003
+2024-03-11 23:23:01 - 10772 - main - 252: - cuda,True
+2024-03-11 23:23:01 - 10772 - main - 252: - gpu,0
+2024-03-11 23:23:01 - 10772 - main - 252: - weight_decay,0
+2024-03-11 23:23:01 - 10772 - main - 252: - pretrain,None
+2024-03-11 23:23:01 - 10772 - main - 252: - max_iter,15000
+2024-03-11 23:23:01 - 10772 - main - 252: - iter_size,1
+2024-03-11 23:23:01 - 10772 - main - 252: - average_loss,50
+2024-03-11 23:23:01 - 10772 - main - 252: - snapshots,5000
+2024-03-11 23:23:01 - 10772 - main - 252: - step_size,19500
+2024-03-11 23:23:01 - 10772 - main - 252: - display,100
+2024-03-11 23:23:01 - 10772 - main - 252: - balance,1
+2024-03-11 23:23:01 - 10772 - main - 252: - log,log.txt
+2024-03-11 23:23:01 - 10772 - main - 252: - batch_size,2
+2024-03-11 23:23:01 - 10772 - main - 252: - crop_size,None
+2024-03-11 23:23:01 - 10772 - main - 252: - complete_pretrain,None
+2024-03-11 23:23:01 - 10772 - main - 252: - gamma,0.1
+2024-03-11 23:23:01 - 10772 - main - 252: - a,1
+2024-03-11 23:23:01 - 10772 - main - 252: - b,0
+2024-03-11 23:23:01 - 10772 - main - 252: - type,ce
+2024-03-11 23:23:01 - 10772 - main - 252: - beta,1
+2024-03-11 23:23:01 - 10772 - main - 252: - lgamma,1
+2024-03-11 23:23:01 - 10772 - main - 252: - logger,<Logger CarNet (DEBUG)>
+2024-03-11 23:23:01 - 10772 - main - 253: - {'data_root': 'Sun520/train/', 'data_lst': 'Sun520_aug_train_pair.lst'}
+2024-03-11 23:23:01 - 10772 - main - 254: - ********************************************************************************
+2024-03-11 23:23:02 - 10772 - main - 276: - CarNet34(
+  (encoder): Encoder_v0_762(
+    (stage_1_0): DownsamplerBlock(
+      (conv): Conv2d(3, 13, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (bn): BatchNorm2d(16, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_2_0): DownsamplerBlock(
+      (conv): Conv2d(16, 48, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_2_1): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_2_2): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_2_3): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_2_4): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_2_5): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_2_6): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_2_7): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_3_0): DownsamplerBlock(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_3_1): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_3_2): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_3_3): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_3_4): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_3_5): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_3_6): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_4_0): DownsamplerBlock(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_4_1): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stage_4_2): BasicBlock_encoder(
+      (conv3x3_1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn1): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3x3_2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (bn2): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (conv1x1_1): Conv2d(256, 32, kernel_size=(1, 1), stride=(1, 1))
+  (deconv_1): ConvTranspose2d(32, 32, kernel_size=(3, 3), stride=(4, 4), padding=(1, 1), output_padding=(3, 3))
+  (conv1x1_2): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1))
+  (deconv_2): ConvTranspose2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), output_padding=(1, 1))
+  (conv1x1_3): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+  (conv_1): non_bottleneck_1d_2(
+    (conv1_1): Conv2d(32, 32, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+    (conv1_2): Conv2d(32, 32, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (conv2_1): Conv2d(32, 32, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+    (conv2_2): Conv2d(32, 32, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (bn1): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    (bn2): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    (dropout): Dropout2d(p=0, inplace=False)
+  )
+  (conv1x1_4): Conv2d(32, 1, kernel_size=(1, 1), stride=(1, 1))
+  (deconv_3): ConvTranspose2d(1, 1, kernel_size=(3, 3), stride=(4, 4), padding=(1, 1), output_padding=(3, 3))
+  (conv_2): non_bottleneck_1d_2(
+    (conv1_1): Conv2d(1, 1, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+    (conv1_2): Conv2d(1, 1, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (conv2_1): Conv2d(1, 1, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+    (conv2_2): Conv2d(1, 1, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (bn1): BatchNorm2d(1, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    (bn2): BatchNorm2d(1, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    (dropout): Dropout2d(p=0, inplace=False)
+  )
+)
